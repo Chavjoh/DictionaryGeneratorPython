@@ -44,6 +44,7 @@ import math
 #------------------------------------------------------------------------------#
 
 def updateProgress(percent, barLength = 20):
+	"""Update progress bar in command line"""
 	hashes = '#' * int(round(percent * barLength / 100 ))
 	spaces = ' ' * (barLength - len(hashes))
 	
@@ -51,6 +52,7 @@ def updateProgress(percent, barLength = 20):
 	sys.stdout.flush()
 	
 def sizeDictionary(alphabetSize, minSize, maxSize):
+	"""Calculate dictionary total size with indicated parameters"""
 	sum = 0
 	
 	for currentSize in range(minSize, maxSize+1):
@@ -59,7 +61,7 @@ def sizeDictionary(alphabetSize, minSize, maxSize):
 	return sum
 
 def generateDictionary(alphabet, minSize, maxSize):
-
+	"""Generate dictionary with indicated parameters"""
 	alphabetSize = len(alphabet);
 	currentAlphabetIndex = {}
 	
@@ -127,7 +129,7 @@ if __name__ == '__main__':
 
 	# Create argument parser to help user
 	parser = argparse.ArgumentParser(
-		description='Server instance for challenge response application.'
+		description='Dictionary generator.'
 	)
 	parser.add_argument(
 		'alphabet',
