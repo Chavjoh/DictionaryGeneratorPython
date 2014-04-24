@@ -158,6 +158,8 @@ if __name__ == '__main__':
 	maxSize = int(sys.argv[3])
 
 	if minSize > maxSize:
-		print("Minimum size can't be superior to maxSize")
-
-	generateDictionary(alphabet, minSize, maxSize)
+		print("Minimum size can't be superior to maximum size.")
+	elif (minSize < 1) or (maxSize < 1):
+		print("Minimum and maximum size must be greater than 0.")
+	else:
+		generateDictionary(alphabet, minSize, maxSize)
