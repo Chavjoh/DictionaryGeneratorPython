@@ -19,6 +19,8 @@ Arguments :
 * **minSize** : Minimum size of the generated words.
 * **maxSize** : Maximum size of the generator words.
 
+The dictionary will be generated in the same folder with the name **dictionary.txt**.
+
 ## Feedback
 
 Don't hesitate to fork this project, improve it and make a pull request.
