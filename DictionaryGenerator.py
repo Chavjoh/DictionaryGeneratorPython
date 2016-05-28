@@ -100,7 +100,7 @@ def generateDictionary(alphabet, minSize, maxSize):
 					indexValue = math.floor((currentIndex / pow(alphabetSize, reversePosition)))  % alphabetSize
 
 					# Add the character of the alphabet to the word
-					word += alphabet[indexValue]
+					word += alphabet[int(indexValue)]
 
 				file.write(word + '\n')
 				
